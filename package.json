@@ -1,11 +1,13 @@
 {
   "name": "bookstore",
+  "homepage": "https://harmankaurjass.github.io/BookStore",
   "version": "1.0.0",
   "description": "Building a books selling website",
   "main": "server/index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "start": "cd server && node index.js",
-    "heroku-postbuild": "",
     "server-dev": "cd server && nodemon server.js",
     "client-dev": "cd client && npm start",
     "start-dev": "concurrently \"npm run server-dev\" \"npm run client-dev\""
@@ -33,5 +35,15 @@
     "passport-jwt": "^4.0.0",
     "stripe": "^8.56.0",
     "uuidv4": "^6.1.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harmankaurjass/BookStore.git"
+  },
+  "bugs": {
+    "url": "https://github.com/harmankaurjass/BookStore/issues"
   }
 }

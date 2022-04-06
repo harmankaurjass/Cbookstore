@@ -61,7 +61,7 @@ class Navbar extends Component {
                         <ul className="navbar-nav ml-auto mr-3">
                             <li className="nav-item pr-2">
                                 <form className="form-inline my-2 my-lg-0 " onSubmit={this.handleSearchSubmit}>
-                                    <input className="form-control mr-sm-2" onChange={this.handleSearch} type="search" placeholder="Search by title, author or ISBN" required />
+                                    <input className="form-control mr-sm-2" onChange={this.handleSearch} type="search" placeholder="Search by title, author" required />
                                     <Link to={'/searchbooks/' + this.state.searchBook}><button className="btn btn-outline-success my-2 my-sm-0" type="submit"><i className="fa fa-search" ></i></button></Link>
                                 </form>
                             </li>
